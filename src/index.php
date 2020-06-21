@@ -12,6 +12,6 @@
         <main class="main">
 
         </main>
-        <?php include_once "view/partial/footer.php";?>
+        <?php include_once "view/partial/footer.php"; ?>
     </body>
 </html>
