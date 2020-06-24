@@ -1,7 +1,7 @@
 <?php
 
 
-class News
+class NewsModel
 {
     private $title;
 

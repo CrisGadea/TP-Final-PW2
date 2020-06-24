@@ -1,8 +1,12 @@
 <?php
 
-class User
+class UserModel
 {
     private $role;
+
+    private $name;
+
+    private $surname;
 
     private $username;
 
@@ -31,6 +35,39 @@ class User
     {
         $this->role = $role;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+
+    /**
+     * @param mixed $surname
+     */
+    public function setSurname($surname)
+    {
+        $this->surname = $surname;
+    }
+
 
     /**
      * @return mixed
