@@ -1,5 +1,5 @@
-<?php include_once "view/partial/head.mustache"; ?>
+{{> head }}
 <main>
 
 </main>
-<?php   include_once "partial/footer.mustache";  ?>
+{{> footer }}
