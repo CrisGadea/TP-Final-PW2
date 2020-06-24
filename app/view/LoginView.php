@@ -57,5 +57,3 @@
     </div>
 </form>
 <?php   include_once "partial/footer.mustache";  ?>
-</body>
-</html>

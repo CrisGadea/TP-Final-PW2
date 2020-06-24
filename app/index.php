@@ -44,5 +44,4 @@
     </div>
 </main>
 <?php include_once "view/partial/footer.mustache"; ?>
-</body>
-</html>
+
