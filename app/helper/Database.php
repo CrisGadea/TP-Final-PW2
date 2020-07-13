@@ -1,28 +1,26 @@
 <?php
 
-class Database
-{
-    private $connexion;
+class Database{
 
-    public function __construct($servername, $username, $password, $dbname){
-        $this->connexion  = mysqli_connect($servername, $username, $password, $dbname)
-        or die("Connection failed: " . mysqli_connect_error());
+    private $conexion;
+
+    public function __construct($servidor, $usuario, $password, $basededatos){
+
+        $this->conexion  = mysqli_connect($servidor, $usuario, $password, $basededatos)
+                or die("Connection failed: " . mysqli_connect_error());
+          mysqli_query($this->conexion, "SET NAMES 'utf8'");      
     }
 
-    public function query($sql){
-        $result = mysqli_query($this->connexion, $sql);
+   public function getConexion(){
+    return $this->conexion;
+   }
 
-        $resultAsAssocArray = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  
 
-        return $resultAsAssocArray;
-    }
-
-    public function __destruct(){
-        mysqli_close($this->connexion);
-    }
 
     public static function createDatabaseFromConfig(Config $config){
-        return new Database(
+        return new Database
+        (
             $config->get( "database","servername"),
             $config->get("database","username"),
             $config->get("database","password"),

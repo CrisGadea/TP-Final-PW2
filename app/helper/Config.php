@@ -1,7 +1,6 @@
 <?php
 
-class Config
-{
+class Config{
     private $config;
 
     public function __construct($configPath){

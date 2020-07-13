@@ -1,5 +1,0 @@
-{{> head }}
-<main>
-
-</main>
-{{> footer }}
